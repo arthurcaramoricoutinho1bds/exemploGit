@@ -1,0 +1,145 @@
+tone(pinoBuzzer,262 ); //Nota C
+  delay(1000);
+
+  tone(pinoBuzzer,296 ); //Nota D
+  delay(1000);
+  
+  tone(pinoBuzzer,332 ); //Nota E
+  delay(1000);
+
+  tone(pinoBuzzer,352 ); //Nota F
+  delay(1000);
+
+  tone(pinoBuzzer,394 ); //Nota G
+  delay(1000);
+
+tone(pinoBuzzer,444 ); //Nota A
+  delay(1000);
+
+  tone(pinoBuzzer,498 ); //Nota B
+  delay(1000);
+
+  tone(pinoBuzzer,528 ); //Nota C  
+  delay(1000);
+
+ tone(pinoBuzzer,592 ); //Nota D
+  delay(1000);
+  
+  tone(pinoBuzzer,664 ); //Nota E
+  delay(1000);
+
+  tone(pinoBuzzer,704 ); //Nota F
+  delay(1000);
+
+  tone(pinoBuzzer,788); //Nota G
+  delay(1000);
+
+tone(pinoBuzzer,888 ); //Nota A
+  delay(1000);
+
+  tone(pinoBuzzer,996 ); //Nota B
+  delay(1000);
+
+
+
+
+
+
+
+
+
+
+
+
+Serial.println(digitalRead(pinoButton));
+  
+  if
+  (digitalRead(pinoButton) == 1 && status == false) {
+    Serial.println("Botão apertado ON...");
+  tone(pinoBuzzer, 523); //Nota C
+  digitalWrite(pinoLedVermelho, HIGH);
+  status = true;
+   delay(1000);
+   }
+else if (digitalRead(pinoButton) == 1 && status == true) {
+   Serial.println("Botão apertado OFF...");
+   noTone(pinoBuzzer); //desliga a buzzer
+  digitalWrite(pinoBuzzer, LOW); //desliga a buzzer
+  digitalWrite(pinoLedVermelho, LOW);// apaga o led
+  delay(1000);
+  status = false;
+  }
+}
+
+
+
+
+
+-----------------------------------------------PARABENS PRA VC------------------------------------------------------------
+
+// constante para o pino da buzzer
+#define pinoBuzzer 2
+
+// Constante do led
+#define pinoLedVermelho 3
+
+// constante do botao
+#define pinoButton 4
+
+
+//declaraçao da variavel de estado do botao
+bool status = false;
+
+void setup() {
+  Serial.begin(9600);
+
+  // modo do pino
+  pinMode(pinoBuzzer, OUTPUT);
+  pinMode(pinoLedVermelho, OUTPUT);
+  pinMode(pinoButton, INPUT);
+  delay(1000);  // parada estratégica
+}
+
+void loop() {
+ tone(pinoBuzzer,394 ); //Nota G
+  delay(1000);
+
+ tone(pinoBuzzer,394 ); //Nota G
+  delay(1000);
+
+  
+  tone(pinoBuzzer,444 ); //Nota A
+  delay(1000);
+
+tone(pinoBuzzer,394 ); //Nota G
+  delay(1000);
+
+  tone(pinoBuzzer,528 ); //Nota C
+  delay(1000);
+
+tone(pinoBuzzer,498 ); //Nota B
+  delay(1000);
+
+  tone(pinoBuzzer,394 ); //Nota G
+  delay(1000);
+
+ tone(pinoBuzzer,394 ); //Nota G
+  delay(1000);
+
+  
+  tone(pinoBuzzer,444 ); //Nota A
+  delay(1000);
+
+
+ tone(pinoBuzzer,394 ); //Nota G
+  delay(1000);
+
+  tone(pinoBuzzer,592 ); //Nota D
+  delay(1000);
+
+ tone(pinoBuzzer,528 ); //Nota C
+  delay(1000);
+}
+
+
+  
